@@ -1,0 +1,7 @@
+node_modules
+.env
+.idea
+/tracker-api.log
+*.log
+media
+upload
