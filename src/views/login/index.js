@@ -76,8 +76,6 @@ class Login extends React.Component {
     const redirectUrl = getUrlParameter("redirect");
     const { preventRedirect = false } = this.props;
 
-    console.log(preventRedirect, "preventredirect");
-
     if (redirectUrl && !getCookie("session_token") && !preventRedirect) {
       this.props.history.push(`/login?redirect=${redirectUrl}`);
     } else if (getCookie("session_token") && !preventRedirect) {
