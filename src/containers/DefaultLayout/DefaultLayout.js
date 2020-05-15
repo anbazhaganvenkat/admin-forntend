@@ -6,11 +6,10 @@ import routes from "../../routes";
 
 import SideBar from "../../components/SideBar";
 
-import { getCookie, isExpert } from "../../lib/helper";
+import { getCookie } from "../../lib/helper";
 
 import { Navbar, NavbarBrand } from "reactstrap";
-import { apiClient } from "../../apiClient";
-import { endpoints, TORCHLITE_WEBSITE_URL } from "../../configs";
+import {  TORCHLITE_WEBSITE_URL } from "../../configs";
 import UserNavDropdown from "../../components/header/UserNavDropdown";
 
 const DefaultFooter = React.lazy(() => import("./DefaultFooter"));

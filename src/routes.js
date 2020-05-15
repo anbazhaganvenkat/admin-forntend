@@ -1,4 +1,3 @@
-import React from "react";
 import DefaultLayout from "./containers/DefaultLayout";
 
 // Login

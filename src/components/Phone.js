@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Field } from "formik";
-import { FormGroup, Input, FormFeedback } from "reactstrap";
+import { FormGroup, FormFeedback } from "reactstrap";
 import Label from "./Label";
 import NumberFormat from "react-number-format";
 

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 // Components
 import Email from "../../components/Email";
@@ -10,7 +9,7 @@ import Password from "../../components/Password";
 import { apiClient } from "../../apiClient";
 
 // Configs
-import { endpoints, DEFAULT_API_KEY } from "../../configs";
+import { endpoints } from "../../configs";
 
 // Helper
 import { getCookie, setCookie, getUrlParameter } from "../../lib/helper";

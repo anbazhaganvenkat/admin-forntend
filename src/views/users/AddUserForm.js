@@ -16,9 +16,6 @@ import { apiClient } from "../../apiClient";
 import { toString } from "../../lib/helper";
 
 export default class AddUserForm extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   _submit = values => {
     if (this._validateFields(values) === false) {
@@ -55,11 +52,6 @@ export default class AddUserForm extends React.Component {
     return apiClient
       .post(endpoints().userAPI, data)
       .then(response => {
-        let successMessage;
-        if (response && response.data) {
-          successMessage = response.data.message;
-        }
-
         window.location.replace("/users");
       })
       .catch(error => {

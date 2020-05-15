@@ -1,5 +1,5 @@
 import React from "react";
-import { Table, Row, Col, Input } from "reactstrap";
+import { Table, Row, Col } from "reactstrap";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { fetchList, setTablePage } from "../../actions/table";
@@ -248,7 +248,6 @@ class ReduxTable extends React.Component {
       table,
       id,
       children: columns,
-      headerComponent,
       showHeader,
       onRowClick,
       bulkSelect,
@@ -262,8 +261,6 @@ class ReduxTable extends React.Component {
     const {
       selectedAll,
       selectedIds,
-      selectedSortOption,
-      sortByOptions,
     } = this.state;
 
     let data = [];

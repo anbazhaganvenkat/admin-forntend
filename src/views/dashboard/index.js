@@ -1,6 +1,5 @@
 import React from "react";
 import DashboardStatisticsCards from "./DashboardStatisticsCards";
-import {getCookie, getUrlParameter} from "../../lib/helper";
 import { apiClient } from "../../apiClient";
 // Configs
 import { endpoints } from "../../configs";

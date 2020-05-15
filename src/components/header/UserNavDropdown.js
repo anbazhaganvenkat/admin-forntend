@@ -4,7 +4,6 @@ import {
   DropdownMenu,
   DropdownToggle,
   UncontrolledDropdown,
-  NavLink,
 } from "reactstrap";
 import Avatar from "../Avatar";
 import { getCookie, clearCookie } from "../../lib/helper";
@@ -12,7 +11,6 @@ import { Link } from "react-router-dom";
 import { apiClient } from "../../apiClient";
 import { endpoints } from "../../configs";
 import history from "../../history";
-import { UserIcon } from "../../assets/img/icons";
 
 function logoutUser() {
   apiClient.defaults.headers.common.Authorization = null;
@@ -27,8 +25,8 @@ const UserNavDropdown = (props) => {
   const [lastName, setLastName] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [avatarUrl, setAvatarUrl] = useState("");
-  const [userId, setUserId] = useState(null);
-  const [expertId, setExpertId] = useState(null);
+  const [setUserId] = useState(null);
+  const [setExpertId] = useState(null);
 
   // Set session token
   const token = getCookie("session_token");
@@ -45,11 +43,6 @@ const UserNavDropdown = (props) => {
     apiClient
       .get(`${endpoints().userAPI}`)
       .then((response) => {
-        let successMessage;
-        if (response && response.data) {
-          successMessage = response.data.message;
-        }
-
         const { id, firstName, lastName, avatarUrl, expertId } = response.data;
 
         setFirstName(firstName);

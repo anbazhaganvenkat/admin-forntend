@@ -78,11 +78,6 @@ export default class UpdateUserForm extends React.Component {
     return apiClient
       .put(`${endpoints().userAPI}/${this.props.match.params.id}`, data)
       .then((response) => {
-        let successMessage;
-        if (response && response.data) {
-          successMessage = response.data.message;
-        }
-
         // window.location.replace("/users");
         const redirectUrl = getUrlParameter("redirect");
         if (redirectUrl) {
@@ -109,11 +104,6 @@ export default class UpdateUserForm extends React.Component {
     return apiClient
       .delete(`${endpoints().userAPI}/${this.props.match.params.id}`)
       .then((response) => {
-        let successMessage;
-        if (response && response.data) {
-          successMessage = response.data.message;
-        }
-
         window.location.replace("/users");
       })
       .catch((error) => {
@@ -134,10 +124,6 @@ export default class UpdateUserForm extends React.Component {
     return apiClient
       .get(`${endpoints().userAPI}/${this.props.match.params.id}`)
       .then((response) => {
-        let successMessage;
-        if (response && response.data) {
-          successMessage = response.data.message;
-        }
         this.setState({ UserDetails: response.data, loading: true });
       })
       .catch((error) => {

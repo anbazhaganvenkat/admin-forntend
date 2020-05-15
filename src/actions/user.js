@@ -49,12 +49,7 @@ export function addNewUser(data) {
 
     return apiClient
       .post(endpoints().userAPI, data)
-      .then((response) => {
-        let successMessage;
-        if (response && response.data) {
-          successMessage = response.data.message;
-        }
-      })
+      .then((response) => {})
       .then(() => {
         dispatch(
           fetchList("users", `${endpoints().userAPI}`, 1, 10, {

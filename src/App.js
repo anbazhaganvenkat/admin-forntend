@@ -13,7 +13,6 @@ import DefaultLayout from "./containers/DefaultLayout";
 
 /** Views **/
 import Dashboard from "./views/dashboard";
-import LoginPage from "./views/login";
 
 // Users
 import Users from "./views/users";
