@@ -344,7 +344,6 @@ class ReduxTable extends React.Component {
                   </th>
                 )}
                 {React.Children.map(columns, (x) => {
-                  // TODO: Santhosh, let's have the "selected" class applied when you click on the TH for the filterings.
                   return (
                     x && (
                       <th
